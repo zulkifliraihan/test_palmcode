@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@100..900&display=swap');
+  /* Tambahkan format font sesuai kebutuhan */
+}
+
+@font-face {
+  font-family: 'Bodoni Moda';
+  src: url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+}
+
+.group[data-has-value=true] .group-data-\[has-value\=true\]\:text-default-foreground {
+  color: white !important;
+}
+
+span.transition-opacity > svg {
+  color: white !important;
+}
+
+label.will-change-auto {
+  color: rgb(156 163 175 / var(--tw-text-opacity)) !important;
+}
+
+button[data-slot="trigger"] {
+  background-color: rgb(39 39 42 / var(--tw-bg-opacity)) !important;
+--tw-bg-opacity: 1 !important;
+}
+
+.bg-image-sky {
+  background-image: url('/background2.jpeg');
+}
+
+.bg-image-surfing {
+  background-image: url('/background.png');
+
+}
